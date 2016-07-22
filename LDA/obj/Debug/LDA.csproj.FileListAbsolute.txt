@@ -1,9 +1,0 @@
-c:\users\aixile\documents\visual studio 2015\Projects\LDA\LDA\bin\Debug\LDA.exe.config
-F:\Workspace\Visual Studio\LDA\LDA\bin\Debug\LDA.exe.config
-F:\Workspace\Visual Studio\LDA\LDA\obj\Debug\LDA.csprojResolveAssemblyReference.cache
-F:\Workspace\Visual Studio\LDA\LDA\bin\Debug\LDA.exe
-F:\Workspace\Visual Studio\LDA\LDA\bin\Debug\LDA.pdb
-F:\Workspace\Visual Studio\LDA\LDA\bin\Debug\CommandLine.dll
-F:\Workspace\Visual Studio\LDA\LDA\bin\Debug\CommandLine.xml
-F:\Workspace\Visual Studio\LDA\LDA\obj\Debug\LDA.exe
-F:\Workspace\Visual Studio\LDA\LDA\obj\Debug\LDA.pdb
