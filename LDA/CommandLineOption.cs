@@ -24,5 +24,11 @@ namespace LDA
 
         [Option("niters")]
 		public int niters { get; set; }
+
+		[Option("input")]
+		public string input { get; set; }
+
+		[Option("outputdir")]
+		public string outputdir { get; set; }
     }
 }
