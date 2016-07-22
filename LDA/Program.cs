@@ -8,25 +8,26 @@ using System.Diagnostics;
 
 namespace LDA
 {
-    class Program
-    {
+	class Program
+	{
 
-        static private CommandLineOption GetDefaultOption()
-        {
-            CommandLineOption option = new CommandLineOption();
-            option.alpha = 0.1;
-            option.beta = 0.1;
-            option.topics = 10;
+		static private CommandLineOption GetDefaultOption()
+		{
+			CommandLineOption option = new CommandLineOption();
+			option.alpha = 0.1;
+			option.beta = 0.1;
+			option.topics = 10;
 			option.savestep = 100;
-			option.niters = 500;
-			option.input = @"F:\Workspace\Visual Studio\LDA\LDA\testdata\tmdocs.dat";
-			option.outputdir = @"F:\Workspace\Visual Studio\LDA\LDA\testdata\output";
+			option.niters = 1000;
+			option.twords = 30;
+			option.input = @"C:\Users\yanghuaj\Workspace\LDAGibbs\LDA\bin\Release\testX.txt";
+			option.outputfile = @"C:\Users\yanghuaj\Workspace\LDAGibbs\LDA\bin\Release\a";
 
 			return option;
-        }
+		}
 
-        static void Main(string[] args)
-        {
+		static void Main(string[] args)
+		{
 
 			CommandLineOption opt = GetDefaultOption();
 			Parser parser = new Parser();
@@ -34,12 +35,19 @@ namespace LDA
 			try
 			{
 				parser.ParseArguments(args, opt);
+				LDAGibbsSampling model = new LDAGibbsSampling();
+				Corpora cor = new Corpora();
+				cor.LoadDataFile(opt.input);
+				model.TrainNewModel(cor, opt);
 			}
-			catch(Exception ex)
-			
+			catch (Exception ex)
+			{
+
+				Console.WriteLine(ex.StackTrace);
+				Console.WriteLine(ex.Message);
 
 			}
 
-        }
-    }
+		}
+	}
 }

@@ -8,27 +8,30 @@ using CommandLine.Text;
 
 namespace LDA
 {
-    public class CommandLineOption
-    {
-        [Option("topic")]
-        public int topics { get; set; }
+	public class CommandLineOption
+	{
+		[Option("topic")]
+		public int topics { get; set; }
 
-        [Option("savestep")]
+		[Option("savestep")]
 		public int savestep { get; set; }
 
-        [Option("alpha")]
-        public double alpha { get; set; }
+		[Option("alpha")]
+		public double alpha { get; set; }
 
-        [Option("beta")]
-        public double beta { get; set; }
+		[Option("beta")]
+		public double beta { get; set; }
 
-        [Option("niters")]
+		[Option("niters")]
 		public int niters { get; set; }
 
 		[Option("input")]
 		public string input { get; set; }
 
-		[Option("outputdir")]
-		public string outputdir { get; set; }
-    }
+		[Option("output")]
+		public string outputfile { get; set; }
+
+		[Option("twords")]
+		public int twords { get; set; }
+	}
 }
